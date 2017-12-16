@@ -1,0 +1,147 @@
+body* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+
+    font-family: 'Spectral SC', serif;
+    height: 100%;
+    text-align: center;
+    color: white;
+    padding: 60px;
+    padding-bottom: 150px;
+
+}
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline-block;
+    border-right: 0px solid cadetblue;
+    margin-left: 70px;
+    font-size: 20px;
+    padding-top: 20px;
+
+
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-decoration-style: solid;
+    color: saddlebrown;
+
+
+
+}
+
+
+
+li:last-child {
+    border-right: none;
+}
+
+img {
+    opacity: 0.2;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+p {
+    color: saddlebrown;
+}
+
+.welcome {
+    height: 250px;
+    width: 250px;
+    border: solid brown;
+    background-color: cadetblue;
+    opacity: 0.9;
+
+}
+
+.js-translate {
+
+    float: left;
+    min-height: 230px;
+    margin-right: 10px;
+    position: relative;
+    left: 300px;
+
+}
+
+.js-archive {
+    float: right;
+    min-height: 230px;
+    width: 250px;
+    position: relative;
+    right: 300px;
+}
+
+
+
+.wrapper {
+
+    display: block;
+    text-align: center;
+    margin-top: 20%;
+    /*    position: fixed;*/
+    top: 50px;
+    left: 33%;
+
+
+}
+
+h1 {
+
+    text-align: center;
+    color: saddlebrown;
+    opacity: 0.9;
+}
+
+
+
+.search-box {
+
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 350px;
+
+}
+
+*/ @media only screen and (min-width: 500px) body main .wrapepr {
+
+    width: 48%;
+    float: left;
+    clear: both;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Serbian Verbs API Capstone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="background-image">
+        <img src="website-images/background-image-capstone.jpg">
+    </section>
+
+    <header role="banner">
+        <h1>SERBO-CROATIAN FOR ALL</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#translate">Translate</a></li>
+            <li><a href="#googlebooks">Google Books</a></li>
+        </ul>
+    </nav>
+
+    <main role="main" class="wrapper">
+        <a name="about"></a>
+        <section class="home">
+            <div class="text">
+                <p> Welcome to Learn Serbo-Croatian for all!</p>
+                <p> So you want to learn Serbo-Croatian language! Great!
+                    <br> You will be able to access the translation feature, as well ass be able to search through various material by using the google books database. </p>
+
+                <button class="begin" role="submit" id="js-begin">Enter</button>
+
+            </div>
+
+        </section>
+
+
+
+        <a name="translate"></a>
+        <section class="welcome js-translate">
+            <div class="translate">
+                <p>Serbo-Croatian Translator</p>
+                <button class="start" role="submit" id="translate">Translate</button>
+            </div>
+        </section>
+
+        <a name="googlebooks"></a>
+        <section class="welcome js-googlebooks">
+            <div class="archive">
+                <p>Search the Archive</p>
+                <button class="start" role="submit" id="translate">Search</button>
+            </div>
+        </section>
+
+        <section class="search-box">
+
+            <form action="query" class="js-search-form">
+                <label for="query"></label>
+
+                <input type="text" class="js-query" placeholder="Enter a verb">
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+        <section class="translate-results">
+
+            <ul>
+                <li></li>
+            </ul>
+
+        </section>
+
+        <section class="googlebooks-results">
+
+            <ul></ul>
+
+        </section>
+
+    </main>
+    <footer>
+        <ul>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Email</a></li>
+        </ul>
+    </footer>
+
+
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>
