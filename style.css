@@ -1,4 +1,6 @@
-body* {
+/*CSS RESET*/
+
+* {
     margin: 0;
     padding: 0;
     border: 0;
@@ -14,8 +16,15 @@ body* {
     -webkit-padding-end: 0px;
 }
 
+/*GENERAL STYLES*/
+
 html {
     height: 100%;
+    background: rgba(0, 0, 0, 0) url("../website-images/transparent-website-tree.png") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 body {
@@ -30,20 +39,56 @@ body {
 }
 
 
+.text p {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
+    padding: 0.5rem 5rem;
+    font-family: 'Spectral SC';
+    border-radius: 3px;
+    text-align: left;
+
+
+}
+
+p {
+    color: saddlebrown;
+    margin-bottom: 2rem;
+}
+
+button {
+    background-color: darkslategrey;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem;
+    /*    font: */
+    border-radius: 10px;
+}
+
+input {
+    background-color: bisque;
+    padding: 0.5rem 1rem;
+    color: saddlebrown;
+    margin: 0.5rem 1rem;
+    border-radius: 10px;
+}
+
 nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: inline-block;
+
 }
 
 nav ul li {
     display: inline-block;
     border-right: 0px solid cadetblue;
-    margin-left: 70px;
-    font-size: 20px;
-    padding-top: 20px;
-
+    margin-left: 60px;
+    font-size: 12px;
+    padding-top: 4px;
+    color: saddlebrown;
+    border-radius: 5px;
+    border: solid cadetblue;
 
 }
 
@@ -55,71 +100,43 @@ nav ul li a {
     text-decoration-style: solid;
     color: saddlebrown;
 
+}
 
-
+.row {
+    max-width: 1000px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
 }
 
 
 
+
+
+
+
+/*
 li:last-child {
     border-right: none;
-}
+}*/
 
-img {
-    opacity: 0.2;
-    min-height: 100%;
-    min-width: 1024px;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-p {
-    color: saddlebrown;
+main section div {
+    margin-bottom: 2rem;
 }
 
 .welcome {
+
     height: 250px;
     width: 250px;
     border: solid brown;
     background-color: cadetblue;
     opacity: 0.9;
+    margin-right: auto;
+    margin-left: auto;
 
 }
 
-.js-translate {
 
-    float: left;
-    min-height: 230px;
-    margin-right: 10px;
-    position: relative;
-    left: 300px;
-
-}
-
-.js-archive {
-    float: right;
-    min-height: 230px;
-    width: 250px;
-    position: relative;
-    right: 300px;
-}
-
-
-
-.wrapper {
-
-    display: block;
-    text-align: center;
-    margin-top: 20%;
-    /*    position: fixed;*/
-    top: 50px;
-    left: 33%;
-
-
-}
 
 h1 {
 
@@ -127,6 +144,8 @@ h1 {
     color: saddlebrown;
     opacity: 0.9;
 }
+
+
 
 
 
@@ -138,6 +157,65 @@ h1 {
     top: 350px;
 
 }
+
+/*Translate Results*/
+
+[alt="Wiktionary Logo"] {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+/*Google Books Results*/
+
+#gb-results ul {
+
+    overflow: hidden;
+    margin-top: 1em;
+    list-style-type: none;
+    width: 25%;
+
+
+
+
+}
+
+#gb-results li {
+    float: left;
+    margin-bottom: 2em;
+    padding: 1em;
+    border: 1px cadetblue;
+    border-radius: 10px;
+    color: saddlebrown;
+    width: 40%;
+}
+
+#gb-results li img {
+
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+
+#tr-results,
+#gb-results {
+    background-color: cadetblue;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-top: 1rem;
+
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    vertical-align: middle;
+    border: solid saddlebrown;
+    opacity: 0.9;
+}
+
 
 */ @media only screen and (min-width: 500px) body main .wrapepr {
 
