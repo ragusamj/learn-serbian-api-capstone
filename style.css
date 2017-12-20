@@ -21,10 +21,13 @@
 html {
     height: 100%;
     background: rgba(0, 0, 0, 0) url("../website-images/transparent-website-tree.png") no-repeat center center fixed;
+
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+
 }
 
 body {
@@ -40,12 +43,15 @@ body {
 
 
 .text p {
-    margin-top: 1.5rem;
-    font-size: 1.1rem;
-    padding: 0.5rem 5rem;
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    font-size: 1.2rem;
+    padding: 1rem 5rem;
     font-family: 'Spectral SC';
     border-radius: 3px;
     text-align: left;
+    font-variant-caps: small-caps;
+    font-weight: 700;
 
 
 }
@@ -53,6 +59,7 @@ body {
 p {
     color: saddlebrown;
     margin-bottom: 2rem;
+
 }
 
 button {
@@ -64,6 +71,10 @@ button {
     border-radius: 10px;
 }
 
+button:hover {
+    background-color: darkturquoise;
+}
+
 input {
     background-color: bisque;
     padding: 0.5rem 1rem;
@@ -72,11 +83,13 @@ input {
     border-radius: 10px;
 }
 
+
 nav ul {
     margin: 0;
-    padding: 0;
+    padding: .5rem 1rem;
     list-style: none;
     display: inline-block;
+    float: right;
 
 }
 
@@ -86,10 +99,13 @@ nav ul li {
     margin-left: 60px;
     font-size: 12px;
     padding-top: 4px;
-    color: saddlebrown;
+    /*    color: cadetblue;*/
     border-radius: 5px;
-    border: solid cadetblue;
+    /*    border: solid cadetblue;*/
+}
 
+.link li:hover {
+    background-color: bisque;
 }
 
 nav ul li a {
@@ -98,7 +114,9 @@ nav ul li a {
     text-decoration: none;
     text-transform: uppercase;
     text-decoration-style: solid;
-    color: saddlebrown;
+    color: cadetblue;
+    font-weight: 700;
+    font-size: .8rem;
 
 }
 
@@ -110,7 +128,12 @@ nav ul li a {
 }
 
 
-
+.bottom {
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    margin-top: 2rem;
+}
 
 
 
@@ -124,6 +147,7 @@ main section div {
     margin-bottom: 2rem;
 }
 
+/*
 .welcome {
 
     height: 250px;
@@ -135,7 +159,29 @@ main section div {
     margin-left: auto;
 
 }
+*/
 
+.col-6 {
+
+    height: 90px;
+    width: 250px;
+    border: solid brown;
+    background-color: cadetblue;
+    opacity: 0.9;
+    display: inline-block;
+    margin-top: 1.5rem;
+    text-align: center;
+
+
+}
+
+
+.welcome p {
+    margin-bottom: auto;
+    margin-top: auto;
+    text-align: center;
+
+}
 
 
 h1 {
@@ -165,7 +211,47 @@ h1 {
     height: 50px;
 }
 
+#tr-results ul {
 
+    overflow: hidden;
+    margin-top: 1em;
+    list-style-type: none;
+    padding-bottom: 1rem;
+
+
+
+
+}
+
+#tr-results li {
+    float: left;
+    margin-bottom: 2em;
+    padding: .5rem 1em;
+    border: 1px cadetblue;
+    border-radius: 10px;
+    color: saddlebrown;
+    width: 33%;
+
+}
+
+.row::before,
+.row::after {
+    display: table;
+    content: '';
+}
+
+.row::after {
+    clear: both;
+}
+
+
+
+#tr-results li img {
+
+    display: block;
+    max-width: 100%;
+    border-radius: 10px;
+}
 
 /*Google Books Results*/
 
@@ -174,7 +260,7 @@ h1 {
     overflow: hidden;
     margin-top: 1em;
     list-style-type: none;
-    width: 25%;
+    padding-bottom: 1rem;
 
 
 
@@ -184,12 +270,25 @@ h1 {
 #gb-results li {
     float: left;
     margin-bottom: 2em;
-    padding: 1em;
+    padding: .5rem 1em;
     border: 1px cadetblue;
     border-radius: 10px;
     color: saddlebrown;
-    width: 40%;
+    width: 33%;
+
 }
+
+.row::before,
+.row::after {
+    display: table;
+    content: '';
+}
+
+.row::after {
+    clear: both;
+}
+
+
 
 #gb-results li img {
 
