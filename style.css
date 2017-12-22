@@ -16,12 +16,10 @@
     -webkit-padding-end: 0px;
 }
 
-/*GENERAL STYLES*/
 
 html {
     height: 100%;
     background: rgba(0, 0, 0, 0) url("../website-images/transparent-website-tree.png") no-repeat center center fixed;
-
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -29,6 +27,8 @@ html {
 
 
 }
+
+/*GENERAL STYLES*/
 
 body {
 
@@ -42,19 +42,15 @@ body {
 }
 
 
-.text p {
-    margin-top: 5rem;
-    margin-bottom: 4rem;
-    font-size: 1.2rem;
-    padding: 1rem 5rem;
-    font-family: 'Spectral SC';
-    border-radius: 3px;
-    text-align: left;
-    font-variant-caps: small-caps;
-    font-weight: 700;
+h2 {
 
-
+    font-size: 1.5rem;
+    color: saddlebrown;
+    text-align: center;
+    opacity: 0.9;
 }
+
+
 
 p {
     color: saddlebrown;
@@ -132,7 +128,7 @@ nav ul li a {
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
-    margin-top: 2rem;
+    margin-top: -4rem;
 }
 
 
@@ -175,6 +171,16 @@ main section div {
 
 }
 
+.search-box {
+
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 350px;
+
+}
+
+/*HOMESCREEN*/
 
 .welcome p {
     margin-bottom: auto;
@@ -184,6 +190,20 @@ main section div {
 }
 
 
+.text p {
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+    font-size: 1.2rem;
+    padding: 1rem 5rem;
+    font-family: 'Spectral SC';
+    border-radius: 3px;
+    text-align: left;
+    font-variant-caps: small-caps;
+    font-weight: 700;
+
+
+}
+
 h1 {
 
     text-align: center;
@@ -192,17 +212,6 @@ h1 {
 }
 
 
-
-
-
-.search-box {
-
-    display: block;
-    text-align: center;
-    position: relative;
-    top: 350px;
-
-}
 
 /*Translate Results*/
 
@@ -231,6 +240,7 @@ h1 {
     border-radius: 10px;
     color: saddlebrown;
     width: 33%;
+
 
 }
 
@@ -307,7 +317,7 @@ h1 {
     margin: 0 auto;
     margin-top: 3rem;
     margin-top: 1rem;
-
+    margin-bottom: 3rem;
     padding-top: 1rem;
     padding-bottom: 2rem;
     vertical-align: middle;
@@ -315,10 +325,49 @@ h1 {
     opacity: 0.9;
 }
 
+@media only screen and (max-width: 480px) {
+    body main {
 
-*/ @media only screen and (min-width: 500px) body main .wrapepr {
+        width: 95%;
+        float: none;
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-    width: 48%;
-    float: left;
-    clear: both;
+    .text p {
+
+        padding: 1rem 0rem;
+
+    }
+
+    nav ul {
+        display: block;
+        float: none;
+
+
+    }
+
+    nav ul li {
+
+        margin-left: 0px;
+
+    }
+
+    #gb-results li {
+
+        float: none;
+        width: 100%;
+    }
+
+    #tr-results li {
+        float: none;
+        width: 100%;
+    }
+
+    h1 {
+
+        font-size: 1.5rem;
+    }
+
 }
