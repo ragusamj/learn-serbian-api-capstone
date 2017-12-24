@@ -34,7 +34,7 @@
     <!--SCREEN 1: ENTER THE APP-->
     <main role="main" class="wrapper">
         <a name="about"></a>
-        <section role="home">
+        <section role="home" class="hide-me home">
             <div class="text row">
 
                 <p> Welcome! This application is an excellent source for advanced Serbo-Croatian students.
@@ -46,28 +46,28 @@
             <div class="welcome row">
                 <div id="js-translate" class="col-6">
                     <p>SRBO-CROATIAN TRANSLATOR</p>
-                    <button class="start" role="submit" id="translate">Translate</button>
+                    <button class="start-translate" role="submit" id="translate">Translate</button>
                 </div>
 
                 <div id="js-googlebooks" class="col-6">
                     <p>FIND A BOOK!</p>
-                    <button class="start" role="submit" id="translate">Search</button>
+                    <button class="start-read" role="submit" id="translate">Search</button>
                 </div>
             </div>
         </section>
 
         <!--SCREEN 2: TRANSLATE SCREEN: INPUT-->
         <a name="translate"></a>
-        <section role="search-box row">
+        <section role="search-translate row" class="hide-me  translate">
             <h2>TRANSLATE</h2>
+            <div id="search" class="search hidden">
+                <form id="text-translate" class="js-search-form">
+                    <label for="query"></label>
 
-            <form action="query" class="js-search-form">
-                <label for="query"></label>
-
-                <input type="text" class="js-query" placeholder="Enter a word">
-                <button type="submit">Submit</button>
-            </form>
-
+                    <input id="query" type="js-query" class="translate-query" placeholder="Enter a word">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
 
             <!-- Cont. SCREEN 2 (under the search bar): RESULTS-->
             <!--Wiktionary Link-->
@@ -78,22 +78,28 @@
             <div id="tr-results" class="row">
 
                 <ul>
+                    <!--
                     <li>
                         <h3>Results</h3>
                         <p>Lorem Ipsum</p>
                         <img src="website-images/Wiktionary-logo_wpstyle-en_with_transparency.png" alt="Logo">
-                        <a href="https://en.wiktionary.org/wiki/raditi"><img src="website-images/Wiktionary-logo_wpstyle-en_with_transparency.png" alt="Wiktionary Logo"></a></li>
+                        <a href="https://en.wiktionary.org/wiki/raditi">
+                        <img src="website-images/Wiktionary-logo_wpstyle-en_with_transparency.png" alt="Wiktionary Logo">
+                        </a>
+                    </li>
                     <li>
                         <h3>Results</h3>
                         <p>Lorem Ipsum</p>
                         <img src="website-images/Wiktionary-logo_wpstyle-en_with_transparency.png" alt="Logo">
-                        <a href="https://en.wiktionary.org/wiki/raditi"><img src="website-images/Wiktionary-logo_wpstyle-en_with_transparency.png" alt="Wiktionary Logo"></a></li>
+                        <a href="https://en.wiktionary.org/wiki/raditi">
+                        <img src="website-images/Wiktionary-logo_wpstyle-en_with_transparency.png" alt="Wiktionary Logo"></a></li>
 
                     <li>
                         <h3>Results</h3>
                         <p>Lorem Ipsum</p>
                         <img src="website-images/Wiktionary-logo_wpstyle-en_with_transparency.png" alt="Logo">
                         <a href="https://en.wiktionary.org/wiki/raditi"><img src="website-images/Wiktionary-logo_wpstyle-en_with_transparency.png" alt="Wiktionary Logo"></a></li>
+-->
 
 
                 </ul>
@@ -103,14 +109,14 @@
 
         <!--SCREEN 3: GOOGLE BOOKS SCREEN: INPUT -->
         <a name="googlebooks"></a>
-        <section role="search-box">
+        <section role="search-read" class="hide-me read">
             <div class="row"></div>
             <h2>FIND A BOOK</h2>
 
-            <form action="query" class="js-search-form">
+            <form id="text-read" class="js-search-form">
                 <label for="query"></label>
 
-                <input type="text" class="js-query" placeholder="Enter a word">
+                <input type="text" class="read-query" placeholder="Enter a word">
                 <button type="submit">Submit</button>
             </form>
 
@@ -171,7 +177,7 @@
 
 
     <script src="https://code.jquery.com/jquery.min.js"></script>
-<script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 
 </body>
 
