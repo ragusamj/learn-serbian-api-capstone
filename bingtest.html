@@ -1,0 +1,98 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript">
+	var _bingApiUrl = 'http://api.microsofttranslator.com/V2/Ajax.svc/';
+	var _bingTranslateAppId = 'uKpTajKGcd6xWarJ+VSHxoFZtflA+pSHKd7G2BFw/eo';
+	var _fromLang = 'en';
+	var _toLang = 'bs';
+	
+	var text = 'hello';
+	
+	function TranslateCallback(response) {
+		if (response != '') {
+			$('#translationResult').html(response.toLowerCase());
+		}
+		else {
+			$('#translationResult').html('no response...');
+		}
+	}
+	
+	function Translate() {
+		var s = document.createElement("script");
+		s.src = _bingApiUrl + 'Translate?oncomplete=TranslateCallback&appId=' + _bingTranslateAppId + '&text=' + text + '&from=' + _fromLang + '&to=' + _toLang;
+		document.getElementsByTagName("head")[0].appendChild(s);
+	}
+	
+	function TranslateAjax1() {
+		$.ajax({
+			type: 'GET',
+			url: _bingApiUrl + 'Translate?oncomplete=TranslateCallback&appId=' + _bingTranslateAppId + '&text=' + text + '&from=' + _fromLang + '&to=' + _toLang,
+			data: null,
+			contentType: 'text/html',
+			dataType: 'text/html',
+			success: function (response) {
+				$('#translationResult').html(response.toLowerCase());
+			},
+			error: function (e) {
+				alert(e.statusText + ' - ' + e.status + ' - ' + e.responseText);
+			}
+		});
+	}
+	
+	function TranslateAjax2() {
+		$.ajax({
+			type: 'GET',
+			url: _bingApiUrl + 'Translate',
+			data: 'appId=' + _bingTranslateAppId + '&text=' + text + '&from=' + _fromLang + '&to=' + _toLang + '&_=' + new Date().getTime(),
+			dataType: 'jsonp',
+			jsonp: 'oncomplete',
+			processData: false,
+			crossDomain: true,
+			jsonpCallback: function(data, textStatus, jqXHR) {
+				$('#translationResult').html(data);
+			},
+			success: function (data, textStatus, jqXHR) {
+				$('#translationResult').html(data);
+			},
+			error: function (e) {
+				$('#translationResult').html(e.statusText + ' - ' + e.status + ' - ' + e.responseText);
+			}
+		});
+	}
+
+// 	function ajaxTranslate(textToTranslate, fromLanguage, toLanguage) {
+// 	var p = {};
+// 	p.appid = 'uKpTajKGcd6xWarJ+VSHxoFZtflA+pSHKd7G2BFw/eo';
+// 	p.to = toLanguage;
+// 	p.from = fromLanguage;
+// 	p.text = textToTranslate;
+// 	$.ajax({
+// 		url: 'http://api.microsofttranslator.com/V2/Ajax.svc/Translate',
+// 		data: p,
+// 		dataType: 'jsonp',
+// 		jsonp: 'oncomplete',
+// 		jsonpCallback: 'ajaxTranslateCallback',
+// 		complete: function(request, status) {
+// 			alert('complete: '+status);
+// 		},
+// 		success: function(data, status) {
+// 			alert('success: data-'+data+',status-'+status);
+// 		},
+// 		error: function(request, status, error) {
+// 			alert('error: status-'+status+',desc-'+error);
+// 		}
+// 	});
+// } 
+// function ajaxTranslateCallback(response) { 
+// 	alert('ajaxTranslateCallback('+response+')'); 
+// }
+</script>
+</head>
+<body onload="Translate();">
+
+<div id="translationResult"></div>
+
+</body>
+</html>

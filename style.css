@@ -32,12 +32,12 @@ html {
 
 body {
 
-    font-family: 'Spectral SC', serif;
     height: 100%;
     text-align: center;
     color: white;
     padding: 60px;
     padding-bottom: 150px;
+    font-family: 'Cormorant Garamond', serif;
 
 }
 
@@ -54,8 +54,8 @@ h2 {
 
 p {
     color: saddlebrown;
-    margin-bottom: 2rem;
-
+    margin-top: 3rem;
+    /*    border-top: 2px solid saddlebrown;*/
 }
 
 button {
@@ -63,7 +63,6 @@ button {
     color: white;
     padding: 0.5rem 1rem;
     margin: 0.5rem 1rem;
-    /*    font: */
     border-radius: 10px;
 }
 
@@ -86,6 +85,7 @@ nav ul {
     list-style: none;
     display: inline-block;
     float: right;
+    margin-bottom: 5rem;
 
 }
 
@@ -108,11 +108,10 @@ nav ul li a {
     display: inline-block;
     padding: 5px;
     text-decoration: none;
-    text-transform: uppercase;
-    text-decoration-style: solid;
     color: cadetblue;
     font-weight: 700;
-    font-size: .8rem;
+    font-size: .9rem;
+
 
 }
 
@@ -128,7 +127,8 @@ nav ul li a {
     margin-left: auto;
     margin-right: auto;
     display: inline-block;
-    margin-top: -4rem;
+    margin-top: 4rem;
+
 }
 
 
@@ -175,8 +175,11 @@ main section div {
 
     display: block;
     text-align: center;
+    /*
     position: relative;
     top: 350px;
+*/
+    margin-top: 3rem;
 
 }
 
@@ -195,11 +198,10 @@ main section div {
     margin-bottom: 4rem;
     font-size: 1.2rem;
     padding: 1rem 5rem;
-    font-family: 'Spectral SC';
+
     border-radius: 3px;
     text-align: left;
-    font-variant-caps: small-caps;
-    font-weight: 700;
+
 
 
 }
@@ -209,16 +211,29 @@ h1 {
     text-align: center;
     color: saddlebrown;
     opacity: 0.9;
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 
 
 /*Translate Results*/
 
-[alt="Wiktionary Logo"] {
-    width: 50px;
-    height: 50px;
+[alt="Wiktionary Logo"],
+[alt="Google Logo"],
+[alt="Google Image Logo"] {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    float: left;
+    border-radius: 2px saddlebrown;
+    padding-left: .8rem;
+    margin-left: 10%;
+    margin-right: 10%;
+
+
 }
+
+
 
 #tr-results ul {
 
@@ -233,13 +248,13 @@ h1 {
 }
 
 #tr-results li {
-    float: left;
-    margin-bottom: 2em;
+
+    /*    margin-bottom: 3rem;*/
     padding: .5rem 1em;
     border: 1px cadetblue;
     border-radius: 10px;
     color: saddlebrown;
-    width: 33%;
+    width: 100%;
 
 
 }
@@ -261,6 +276,12 @@ h1 {
     display: block;
     max-width: 100%;
     border-radius: 10px;
+
+}
+
+#tr-results li p {
+    border-top: 2px solid saddlebrown;
+
 }
 
 /*Google Books Results*/
@@ -278,13 +299,15 @@ h1 {
 }
 
 #gb-results li {
-    float: left;
+    /*    float: left;*/
+    display: inline-block;
     margin-bottom: 2em;
     padding: .5rem 1em;
     border: 1px cadetblue;
     border-radius: 10px;
     color: saddlebrown;
     width: 33%;
+    vertical-align: top;
 
 }
 
@@ -305,8 +328,17 @@ h1 {
     display: block;
     max-width: 100%;
     border-radius: 10px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+#gb-results li p,
+#gb-results li h3 {
+
+    height: 37px;
+    overflow-x: auto;
+}
 
 
 #tr-results,
@@ -323,6 +355,10 @@ h1 {
     vertical-align: middle;
     border: solid saddlebrown;
     opacity: 0.9;
+}
+
+#tr-results {
+    width: 35%;
 }
 
 @media only screen and (max-width: 480px) {
@@ -369,5 +405,15 @@ h1 {
 
         font-size: 1.5rem;
     }
+    #tr-results li p {
+        width: 100%;
+        float: none;
+    }
 
+    [alt="Wiktionary Logo"],
+    [alt="Google Logo"],
+    [alt="Google Image Logo"] {
+        float: none;
+        width: 100%;
+    }
 }

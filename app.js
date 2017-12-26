@@ -1,6 +1,14 @@
 "use strict"
 
 //define objects, functions and variables.
+function checkText(inputText) {
+    let outputText = inputText;
+    //if input text is not set or defined or is an empty string or is null
+    if ((!inputText) || (inputText === undefined) || (inputText == "") || (inputText == null)) {
+        outputText = " ";
+    }
+    return (outputText);
+}
 //TRANSLATOR:
 //STEP 2:using the input from the user (q) make the API call to get the JSON respone. yandex
 function getTranslationData(searchTerm) {
@@ -35,11 +43,18 @@ function showTranslationData(inputArray) {
         //create and populate one LI for each of the results ("+=" means concatenate to the previous one)
         buildTheHtmlOutput += "<li>";
         //        buildTheHtmlOutput += "<h3>Results</h3>";
-        buildTheHtmlOutput += "<p>" + inputArrayValue + "</p>";
+
         //        buildTheHtmlOutput += "<img src='website-images/Wiktionary-logo_wpstyle-en_with_transparency.png' alt='Logo'>";
         buildTheHtmlOutput += "<a href='https://en.wiktionary.org/wiki/" + inputArrayValue + "'>";
         buildTheHtmlOutput += "<img src='website-images/Wiktionary-logo_wpstyle-en_with_transparency.png' alt='Wiktionary Logo'>";
         buildTheHtmlOutput += "</a>";
+        buildTheHtmlOutput += "<a href='https://www.google.com/search?q=" + inputArrayValue + "' target='_blank'>";
+        buildTheHtmlOutput += "<img src='website-images/google-logo.png' alt='Google Logo'>";
+        buildTheHtmlOutput += "</a>";
+        buildTheHtmlOutput += "<a href='http://images.google.com/images?gbv=2&hl=en&q=" + inputArrayValue + "' target='_blank'>";
+        buildTheHtmlOutput += "<img src='website-images/pictionary-google.png' alt='Google Image Logo'>";
+        buildTheHtmlOutput += "</a>";
+        buildTheHtmlOutput += "<p>" + inputArrayValue + "</p>";
         buildTheHtmlOutput += "</li>";
 
 
@@ -56,8 +71,8 @@ function getReadData(searchTerm) {
         key: 'AIzaSyArklnNS6LdiTscg4VVVkrTKS0KogLpG7k',
 
         q: searchTerm,
-        // filter: 'free-ebooks',
-        maxResults: 20,
+        filter: 'free-ebooks',
+        maxResults: 21,
         orderBy: 'relevance',
         startIndex: 0
     };
@@ -75,6 +90,7 @@ function getReadData(searchTerm) {
 
         /* if the call is successful (status 200 OK) show results */
         .done(function (result) {
+            showReadData(result.items);
             /* if the results are meeningful, we can just console.log them */
             console.log(result);
 
@@ -89,17 +105,52 @@ function getReadData(searchTerm) {
 
 
 }
+
+
+function showReadData(readArray) {
+    console.log(readArray);
+
+    //create an empty variable to store one LI for each one the results
+    let buildTheHtmlOutput = "";
+
+    $.each(readArray, function (readArrayKey, readArrayValue) {
+
+        buildTheHtmlOutput += "<li>";
+        buildTheHtmlOutput += "<h3>" + checkText(readArrayValue.volumeInfo.authors) + "</h3>";
+        buildTheHtmlOutput += "<p>" + checkText(readArrayValue.volumeInfo.title) + "</p>";
+
+        //        buildTheHtmlOutput += "<img src='" + readArrayValue + "' alt='Logo'>";
+        buildTheHtmlOutput += "<a href='https://play.google.com/store/books/details?id=" + readArrayValue.id + "' target='_blank'>";
+        buildTheHtmlOutput += "<img src='" + readArrayValue.volumeInfo.imageLinks.thumbnail + "'>";
+        buildTheHtmlOutput += "</a>";
+        buildTheHtmlOutput += "</li>";
+
+
+    });
+
+    //use the HTML output to show it in the index.html
+    $("#gb-results ul").html(buildTheHtmlOutput);
+
+}
+
+
+
+
 //STEP 1: start translation//
 
 $('document').ready(function () {
     $('.hide-me').hide();
     $('.home').show();
+    $('#gb-results').hide();
+    $('#tr-results').hide();
+
 
 
 
     $('.start-translate').click(function () {
         $('.hide-me').hide();
         $('.translate').show();
+
         //        $('.search-translate').fadeOut(500);
         //        $('.home').fadeOut(500, function () {
         //
@@ -110,7 +161,9 @@ $('document').ready(function () {
     });
     $('.start-read').click(function () {
         $('.hide-me').hide();
+        //
         $('.read').show();
+
         //        $('.home').fadeOut(500, function () {
         //            $('.search-translate').fadeOut(500);
         //            $('.search-read').fadeIn(500);
@@ -122,6 +175,7 @@ $('document').ready(function () {
         event.preventDefault();
         let userInput = $('.translate-query').val();
         getTranslationData(userInput);
+        $('#tr-results').show();
     })
 
 
@@ -129,6 +183,7 @@ $('document').ready(function () {
         event.preventDefault();
         let userInput = $('.read-query').val();
         getReadData(userInput);
+        $('#gb-results').show();
     })
 
 
