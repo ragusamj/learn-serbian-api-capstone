@@ -72,6 +72,7 @@ function getReadData(searchTerm) {
 
         q: searchTerm,
         filter: 'free-ebooks',
+
         maxResults: 21,
         orderBy: 'relevance',
         startIndex: 0
@@ -151,12 +152,6 @@ $('document').ready(function () {
         $('.hide-me').hide();
         $('.translate').show();
 
-        //        $('.search-translate').fadeOut(500);
-        //        $('.home').fadeOut(500, function () {
-        //
-        //            $('.search-translate').fadeIn(500);
-        //
-        //        });
 
     });
     $('.start-read').click(function () {
@@ -186,6 +181,25 @@ $('document').ready(function () {
         $('#gb-results').show();
     })
 
+    //    $('.gb-next').click(function () {
+    //        let nextResult = getReadData();
+    //        nextResult += 21;
+    //        showReadData();
+    //
+    //
+    //           });
+    //            $('.gb-next').click(function (event) {
+    //                event.preventDefault();
+
+
+    //    $('.gb-previous').click(function () {
+    //
+    //        event.preventDefault();
+    //        let nextResult = getReadData();
+    //        nextResult -= 21;
+    //        showReadData();
+    //
+    //    });
 
 
 })
