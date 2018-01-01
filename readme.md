@@ -18,31 +18,29 @@ The part of speach will the be connected to the wiktionary, google images and al
 By having access to this additional resources the user will have conjugations, declentions and a form of pictograph.
 The second functionality includes a possibility of searching the internet archives in Serbo-Croatian language, and will receive textual, video and audio results.
 
-![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/app-flow.jpg)
 
 
 ## User Stories
-* As user, I want to {functionality} in order to {business justification}
-![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/app-flow.jpg)
-
 
 * As a user I would like to land on the website and undestand what is the website about in order to use it.
-![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/homescreen.jpg)
+![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/serbian-api-capstone-home.png)
 
 * As a user I want to be able to enter any word in the search bar and recieve the translation,
 weather I enter the English or the target language.
-![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/dictionary-screen.jpg)
+![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/serbian-api-capstone-translate.png)
 
 
-* After the word yields wanted results in Serbo-Croatian language, I would like to click on the wikiedia, wiktionary,
-google images, and general google searches icon, to lean more about the word.
-![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/dictionary-screen.jpg)
+* After the word yields wanted results in Serbo-Croatian language, I would like to click on the wiktionary,
+general google searche and google images icon, to lean more about the word.
+![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/serbian-api-capstone-translate-results.png)
 
 
 
 *  As a user I would like to find out additional literature/resources to learn about the target language and the target country.
 
-![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/archive-screen.jpg)
+![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/serbian-api-capstone-read.png)
+
+![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/serbian-api-capstone-read-results.png)
 
 
 ## Working Prototype
