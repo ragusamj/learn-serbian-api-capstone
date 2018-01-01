@@ -45,7 +45,7 @@ function showTranslationData(inputArray) {
         //        buildTheHtmlOutput += "<h3>Results</h3>";
 
         //        buildTheHtmlOutput += "<img src='website-images/Wiktionary-logo_wpstyle-en_with_transparency.png' alt='Logo'>";
-        buildTheHtmlOutput += "<a href='https://en.wiktionary.org/wiki/" + inputArrayValue + "'>";
+        buildTheHtmlOutput += "<a href='https://en.wiktionary.org/wiki/" + inputArrayValue + "' target='_blank'>";
         buildTheHtmlOutput += "<img src='website-images/Wiktionary-logo_wpstyle-en_with_transparency.png' alt='Wiktionary Logo'>";
         buildTheHtmlOutput += "</a>";
         buildTheHtmlOutput += "<a href='https://www.google.com/search?q=" + inputArrayValue + "' target='_blank'>";
@@ -148,13 +148,13 @@ $('document').ready(function () {
 
 
 
-    $('.start-translate').click(function () {
+    $('.start-translate, .menu-translate').click(function () {
         $('.hide-me').hide();
         $('.translate').show();
 
 
     });
-    $('.start-read').click(function () {
+    $('.start-read, .menu-read').click(function () {
         $('.hide-me').hide();
         //
         $('.read').show();
