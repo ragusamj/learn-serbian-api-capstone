@@ -23,7 +23,7 @@ The second functionality includes a possibility of searching the google books in
 ## User Stories
 
 * As a user I would like to land on the website and undestand what is the website about in order to use it.
-![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/github-images/serbian-api-capstone-home.png)
+![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/github-images/learn-serbian-api-home.png)
 
 * As a user I want to be able to enter any word in the search bar and recieve the translation,
 weather I enter the English or the target language.
