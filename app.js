@@ -1,16 +1,15 @@
 "use strict"
 
-//define objects, functions and variables.
+
 function checkText(inputText) {
     let outputText = inputText;
-    //if input text is not set or defined or is an empty string or is null
     if ((!inputText) || (inputText === undefined) || (inputText == "") || (inputText == null)) {
         outputText = " ";
     }
     return (outputText);
 }
 //TRANSLATOR:
-//STEP 2:using the input from the user (q) make the API call to get the JSON respone. yandex
+
 function getTranslationData(searchTerm) {
     console.log(searchTerm);
     var result = $.ajax({
@@ -32,19 +31,13 @@ function getTranslationData(searchTerm) {
         });
 
 }
-//duplicate for google books.
+
 function showTranslationData(inputArray) {
     console.log(inputArray);
-
-    //create an empty variable to store one LI for each one the results
     let buildTheHtmlOutput = "";
 
     $.each(inputArray, function (inputArrayKey, inputArrayValue) {
-        //create and populate one LI for each of the results ("+=" means concatenate to the previous one)
         buildTheHtmlOutput += "<li>";
-        //        buildTheHtmlOutput += "<h3>Results</h3>";
-
-        //        buildTheHtmlOutput += "<img src='website-images/Wiktionary-logo_wpstyle-en_with_transparency.png' alt='Logo'>";
         buildTheHtmlOutput += "<a href='https://en.wiktionary.org/wiki/" + inputArrayValue + "' target='_blank'>";
         buildTheHtmlOutput += "<img src='website-images/Wiktionary-logo_wpstyle-en_with_transparency.png' alt='Wiktionary Logo'>";
         buildTheHtmlOutput += "</a>";
@@ -60,10 +53,11 @@ function showTranslationData(inputArray) {
 
     });
 
-    //use the HTML output to show it in the index.html
     $("#tr-results ul").html(buildTheHtmlOutput);
 
 }
+
+//GOOGLE BOOKS
 
 function getReadData(searchTerm) {
 
@@ -80,24 +74,20 @@ function getReadData(searchTerm) {
 
 
     var result = $.ajax({
-            /* update API end point */
             url: "https://www.googleapis.com/books/v1/volumes",
             data: params,
             dataType: "jsonp",
-            /*set the call type GET / POST*/
             type: "GET"
         })
 
 
-        /* if the call is successful (status 200 OK) show results */
+
         .done(function (result) {
             showReadData(result.items);
-            /* if the results are meeningful, we can just console.log them */
             console.log(result);
 
         })
 
-        /* if the call is NOT successful show errors */
         .fail(function (jqXHR, error, errorThrown) {
             console.log(jqXHR);
             console.log(error);
@@ -110,8 +100,6 @@ function getReadData(searchTerm) {
 
 function showReadData(readArray) {
     console.log(readArray);
-
-    //create an empty variable to store one LI for each one the results
     let buildTheHtmlOutput = "";
 
     $.each(readArray, function (readArrayKey, readArrayValue) {
@@ -119,8 +107,6 @@ function showReadData(readArray) {
         buildTheHtmlOutput += "<li>";
         buildTheHtmlOutput += "<h3>" + checkText(readArrayValue.volumeInfo.authors) + "</h3>";
         buildTheHtmlOutput += "<p>" + checkText(readArrayValue.volumeInfo.title) + "</p>";
-
-        //        buildTheHtmlOutput += "<img src='" + readArrayValue + "' alt='Logo'>";
         buildTheHtmlOutput += "<a href='https://play.google.com/store/books/details?id=" + readArrayValue.id + "' target='_blank'>";
         buildTheHtmlOutput += "<img src='" + readArrayValue.volumeInfo.imageLinks.thumbnail + "'>";
         buildTheHtmlOutput += "</a>";
@@ -129,15 +115,9 @@ function showReadData(readArray) {
 
     });
 
-    //use the HTML output to show it in the index.html
     $("#gb-results ul").html(buildTheHtmlOutput);
 
 }
-
-
-
-
-//STEP 1: start translation//
 
 $('document').ready(function () {
     $('.hide-me').hide();
@@ -158,12 +138,6 @@ $('document').ready(function () {
         $('.hide-me').hide();
         //
         $('.read').show();
-
-        //        $('.home').fadeOut(500, function () {
-        //            $('.search-translate').fadeOut(500);
-        //            $('.search-read').fadeIn(500);
-        //        });
-
     });
 
     $('#text-translate').submit(function (event) {
@@ -180,103 +154,4 @@ $('document').ready(function () {
         getReadData(userInput);
         $('#gb-results').show();
     })
-
-    //    $('.gb-next').click(function () {
-    //        let nextResult = getReadData();
-    //        nextResult += 21;
-    //        showReadData();
-    //
-    //
-    //           });
-    //            $('.gb-next').click(function (event) {
-    //                event.preventDefault();
-
-
-    //    $('.gb-previous').click(function () {
-    //
-    //        event.preventDefault();
-    //        let nextResult = getReadData();
-    //        nextResult -= 21;
-    //        showReadData();
-    //
-    //    });
-
-
 })
-//STEP 1a: start the book search//
-
-
-
-
-
-//Get the input from the user (can this form target two search-boxes at ones (tr + gb)?)//
-
-
-
-
-
-
-
-
-
-//using the defined objects, functions and variables
-//show the json array received from the API call
-
-//function displayTranslation
-
-// if there are no results it will show an error
-
-
-
-//STEP 3:  using the JSON response (TEXT), populate the relevant part of your HTML with the variable inside the JSON
-
-
-
-
-
-
-//create an empty variable to store one LI for each one the results
-
-
-
-
-//create and populate one LI for each of the results
-
-
-
-//use the HTML output to show it in the index.html
-
-
-
-
-//GOOGLE BOOKS:
-
-//STEP 2a:using the input from the user (q) make the API call to get the JSON respone.
-
-
-
-//show the json array received from the API call
-
-
-
-// if there are no results it will show an error
-
-
-
-//STEP 3a:  using the JSON response (TEXT), populate the relevant part of your HTML with the variable inside the JSON
-
-
-
-
-
-
-//create an empty variable to store one LI for each one the results
-
-
-
-
-//create and populate one LI for each of the results
-
-
-
-//use the HTML output to show it in the index.html

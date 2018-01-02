@@ -91,8 +91,6 @@ nav ul {
 
 }
 
-
-
 nav ul li {
     display: inline-block;
     border-right: 0px solid cadetblue;
@@ -145,11 +143,24 @@ nav ul li a {
 
     display: block;
     text-align: center;
-    /*
-    position: relative;
-    top: 350px;
-*/
     margin-top: 3rem;
+
+}
+
+#tr-results,
+#gb-results {
+    background-color: cadetblue;
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    vertical-align: middle;
+    border: solid saddlebrown;
+    opacity: 0.9;
 
 }
 
@@ -186,8 +197,11 @@ h1 {
 }
 
 
+/*TRANSLATOR*/
 
-
+#tr-results {
+    width: 35%;
+}
 
 #tr-results ul {
 
@@ -307,27 +321,6 @@ h1 {
 }
 
 
-#tr-results,
-#gb-results {
-    background-color: cadetblue;
-    max-width: 1000px;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 3rem;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-    padding-top: 1rem;
-    padding-bottom: 2rem;
-    vertical-align: middle;
-    border: solid saddlebrown;
-    opacity: 0.9;
-
-}
-
-
-#tr-results {
-    width: 35%;
-}
 
 
 
