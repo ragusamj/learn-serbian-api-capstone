@@ -15,7 +15,6 @@ function getTranslationData(searchTerm) {
     var result = $.ajax({
             url: "https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20171130T020127Z.45d0be296a8190a9.526acec1ed5d18797322ed46ef6078a73f832acf&text=" + searchTerm + "&lang=en-bs&format=html&callback=?",
             dataType: "json",
-
             type: "GET"
         })
 
@@ -136,7 +135,6 @@ $('document').ready(function () {
     });
     $('.start-read, .menu-read').click(function () {
         $('.hide-me').hide();
-        //
         $('.read').show();
     });
 
