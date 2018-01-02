@@ -27,34 +27,34 @@ The second functionality includes a possibility of searching the google books in
 
 * As a user I want to be able to enter any word in the search bar and recieve the translation,
 weather I enter the English or the target language.
-![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/serbian-api-capstone-translate.png)
+![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/github-images/learn-serbian-api-translate.png)
 
 
 * After the word yields wanted results in Serbo-Croatian language, I would like to click on the wiktionary,
 general google searche and google images icon, to lean more about the word.
-![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/serbian-api-capstone-translate-results.png)
+![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/github-images/learn-serbian-api-translate-results.png)
 
 
 
 *  As a user I would like to find out additional literature/resources to learn about the target language and the target country.
 
-![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/serbian-api-capstone-read.png)
+![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/github-images/learn-serbian-api-read.png)
 
-![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/serbian-api-capstone-read-results.png)
+![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/github-images/learn-serbian-api-read-results.png)
 
 
 ## Working Prototype
 
-You can access a working prototype of the app here https://ragusamj.github.io/serbian-verbs-api-capstone
+You can access a working prototype of the app here: https://ragusamj.github.io/learn-serbian-api-capstone/
 
 
-## Screen-shoots
+
 
 
 ## Functionality
 The app's functionality includes:
 * searching the dictionary for translation purposes English to Serbo-Croatian.
-* searching the dictionary for translation purposes Serbo-Croatian to English.
+* searching the google books in Serbo-Croatian.
 
 ## Technology
 * HTML
@@ -63,6 +63,10 @@ The app's functionality includes:
 * jQuery
 
 The app uses AJAX JSON calls to the: https://translate.yandex.net/api/v1.5/tr.json/getLangs?key=trnsl.1.1.20171130T020127Z.45d0be296a8190a9.526acec1ed5d18797322ed46ef6078a73f832acf&ui=sr&callback=?
+and
+"https://www.googleapis.com/books/v1/volumes" for Google Books API.
+
+
 
 
 ## Responsive
@@ -71,4 +75,4 @@ App is built to be responsive across mobile, tablet, laptop, and desktop screen 
 ## Development Roadmap
 This is v1.0 of the app, but future enhancements are expected to include:
 
-Sebian imperfective/perfective verbs.
+Sebian imperfective/perfective verbs database.
