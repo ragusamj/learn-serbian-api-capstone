@@ -1,29 +1,29 @@
-# Serbian Verbs API Capstone
-Thinkful (https://www.thinkful.com) First Capstone Project - App integrating with Yandex language translator API.
-https://github.com/ragusamj/serbian-verbs-api-capstone
+# Learn Serbian API Capstone
+Thinkful (https://www.thinkful.com) First Capstone Project - App integrating with Yandex language translator API and Google Books API.
+https://ragusamj.github.io/learn-serbian-api-capstone/
 
 
 ## Background
-Professionaly and personaly I am passionate about the literature and foreign language acquisition. I develop curriculum and teach Serbo-Croatian language in the Unitied States.
-My experience has been vary valuable and I discovered that there are just few web applications that would allow my students to practice their skills.
-Technology today plays such an important role in our everyday life on all levels, so I decided to create a web applications that will provide my student body with additional and much needed
+Professionaly and personaly I am passionate about the literature and foreign language acquisition. I develop curriculum and teach Serbo-Croatian language.
+In the course of my career as a linguist, I discovered that there are just a few web applications that would allow my students to practice their skills.
+Technology today plays such an important role in our everyday life on all levels, which is why I decided to create a web applications that will provide my students with additional and much needed
 web resources.
 
 
 ## Use Case
 This app is for all English speakers wishing to learn Serbo-Croatian for all levels.
-This app also a fantastic resource for Serbian speaker that wish to learn English on all levels.
-The user will be able to search for any word that will be translated.
-The part of speach will the be connected to the wiktionary, google images and all google search URL.
-By having access to this additional resources the user will have conjugations, declentions and a form of pictograph.
-The second functionality includes a possibility of searching the internet archives in Serbo-Croatian language, and will receive textual, video and audio results.
+The user will be able to translate English into Serbo-Croatian.
+After receiving the Serbo-Croatian translation of a single word, the user will be able to click on wiktionary, google images and google search icons to learn more about the word in the target language environment.
+By having access to this additional resource the user will be able to learn conjugations, declentions and other grammar-related information.
+The google-image icon will act as a modern day pictograph, by revelieling to the user what is the image of the searched word. For example, for the word "bird" the google image will yield a picture of a bird.
+The second functionality includes a possibility of searching the google books in Serbo-Croatian language, and will be able to access the relavant free e-books.
 
 
 
 ## User Stories
 
 * As a user I would like to land on the website and undestand what is the website about in order to use it.
-![Use Case](https://github.com/ragusamj/serbian-verbs-api-capstone/blob/master/github-images/serbian-api-capstone-home.png)
+![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/github-images/serbian-api-capstone-home.png)
 
 * As a user I want to be able to enter any word in the search bar and recieve the translation,
 weather I enter the English or the target language.
