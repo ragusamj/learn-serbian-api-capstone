@@ -54,12 +54,10 @@ h2 {
     opacity: 0.9;
 }
 
-
-
 p {
     color: saddlebrown;
     margin-top: 3rem;
-    /*    border-top: 2px solid saddlebrown;*/
+
 }
 
 button {
@@ -101,9 +99,8 @@ nav ul li {
     margin-left: 60px;
     font-size: 12px;
     padding-top: 4px;
-    /*    color: cadetblue;*/
     border-radius: 5px;
-    /*    border: solid cadetblue;*/
+
 }
 
 .link li:hover {
@@ -129,39 +126,6 @@ nav ul li a {
 }
 
 
-/*
-.bottom {
-    margin-left: auto;
-    margin-right: auto;
-    display: inline-block;
-    margin-bottom: 8rem;
-}
-*/
-
-/*
-li:last-child {
-    border-right: none;
-}*/
-
-/*
-main section div {
-    margin-bottom: 2rem;
-
-}*/
-
-/*
-.welcome {
-
-    height: 250px;
-    width: 250px;
-    border: solid brown;
-    background-color: cadetblue;
-    opacity: 0.9;
-    margin-right: auto;
-    margin-left: auto;
-
-}
-*/
 
 .col-6 {
 
@@ -223,22 +187,7 @@ h1 {
 
 
 
-/*Translate Results*/
 
-/*
-[alt="Wiktionary Logo"],
-[alt="Google Logo"],
-[alt="Google Image Logo"] {
-
-    width: 13%;
-    display: inline-block;
-        float: left;
-    border-radius: 2px;
-    padding-left: .8rem;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-*/
 
 #tr-results ul {
 
@@ -375,14 +324,6 @@ h1 {
 
 }
 
-/*
-.wrapper {
-
-    width: 1129px;
-    height: 410px;
-
-}
-*/
 
 #tr-results {
     width: 35%;
@@ -465,14 +406,7 @@ footer {
         float: none;
     }
 
-    /*
-    #tr-results li a {
-        float: none;
-        width: 35%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-*/
+
 }
 
 @media only screen and (max-width: 480px) {
