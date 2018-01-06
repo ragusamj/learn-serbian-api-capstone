@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Serbian Verbs API Capstone</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
@@ -13,17 +14,21 @@
 <body>
 
 
-    <header role="banner" class="row">
-        <h1>Serbo-Croatian for All</h1>
-
-
-        <nav class="link">
-            <ul>
-                <li><a href="#" onClick="window.location.reload()">Home</a></li>
-                <li><a href="#" class="menu-translate">Translate</a></li>
-                <li><a href="#" class="menu-read">Read</a></li>
-            </ul>
-        </nav>
+    <header role="banner">
+        <div id="top-wrapper">
+            <div class="title">
+                <h1>Serbo-Croatian for All</h1>
+            </div>
+            <div class="navigation">
+                <nav class="link">
+                    <ul>
+                        <li><a href="#" onClick="window.location.reload()">Home</a></li>
+                        <li><a href="#" class="menu-translate">Translate</a></li>
+                        <li><a href="#" class="menu-read">Read</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 
     <!--SCREEN 1: ENTER THE APP-->
@@ -32,21 +37,21 @@
         <section class="hide-me home">
             <div class="text row">
 
-                <p> Welcome! This application is an excellent source for advanced Serbo-Croatian students.
-                    <br> This app has two features: <br> You can choose to translate text. <br>You can find a book in Serbo-Croatian to practice your extensive reading.
+                <p> Welcome! This application is an excellent source for advanced Serbo-Croatian language and culture students.
+                    <br> This app has two features: <br> You can choose to translate text from English into Serbo-Croatian. <br>You can also find a book in Serbo-Croatian to practice your extensive reading.
                 </p>
 
             </div>
 
             <div class="welcome row">
                 <div id="js-translate" class="col-6">
-                    <p>Serbo-Croatian Translator</p>
+                    <!--                    <p>Serbo-Croatian Translator</p>-->
                     <button class="start-translate">Translate</button>
                 </div>
 
                 <div id="js-googlebooks" class="col-6">
-                    <p>Find a book</p>
-                    <button class="start-read">Search</button>
+                    <!--                    <p>Find a book</p>-->
+                    <button class="start-read">Read</button>
                 </div>
             </div>
         </section>
@@ -57,11 +62,17 @@
             <!--            <h2>TRANSLATE</h2>-->
             <div class="row"></div>
             <div id="search" class="search hidden">
+                <div class="about-translate">
+                    <p> Welcome to Serbo-Croatian translator! After you recieve the translation in Serbo-Croatian, you will be able to learn more about the words by clicking on google or google images icons.<br>The google search will provide you with relevant sources in Serbo-Croatian. You will be able to see how the translated portion works in a sentence, contextual topic, song lyrics and other cultural elements. <br> The google images act as a pictionary. You can click on it to see the meaning of the word in pictures.</p>
+
+                    In addition to translation, here are some other useful features of this translator. <br> Click on the google icon. <br>
+
+                </div>
                 <form id="text-translate" class="js-search-form">
                     <label for="query"></label>
-
                     <input id="query" type="js-query" class="translate-query" placeholder="Translate">
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="submit">Submit</button>
+
                 </form>
             </div>
 
@@ -82,16 +93,17 @@
         <!--SCREEN 3: GOOGLE BOOKS SCREEN: INPUT -->
         <a name="read"></a>
         <section class="hide-me read">
-            <div class="row">
-                <!--            <h2>FIND A BOOK</h2>-->
+            <!--
+<div class="row">
+    <h2>FIND A BOOK</h2>
 
-                <form id="text-read" class="js-search-form">
-                    <label for="query"></label>
-
-                    <input type="text" class="read-query" placeholder="Find a book">
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+    <form id="text-read" class="js-search-form">
+        <label for="query">Use a keyword in Serbo-croatian to find a book.</label>
+        <input type="text" class="read-query" placeholder="Find a book">
+        <button type="submit">Submit</button>
+    </form>
+</div>
+-->
 
 
             <!--Cont. SCREEN 3 (under the search bar): GB RESULTS-->
@@ -108,9 +120,9 @@
     <footer>
         <nav class="bottom link">
             <ul>
-                <li><a href="https://www.linkedin.com/in/maria-jovanovic-38586a155/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/ragusamj" target="_blank">GitHub</a></li>
-                <li><a href="mailto:webdevjov@gmail.com" target="_blank">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/maria-jovanovic-38586a155/" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/ragusamj" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
+                <li><a href="mailto:webdevjov@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
             </ul>
         </nav>
     </footer>

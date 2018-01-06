@@ -34,11 +34,12 @@ function getTranslationData(searchTerm) {
 function showTranslationData(inputArray) {
     console.log(inputArray);
     let buildTheHtmlOutput = "";
-
+    let translatedWord = "";
+    $("#tr-results ul").html("");
     $.each(inputArray, function (inputArrayKey, inputArrayValue) {
         buildTheHtmlOutput += "<li>";
-        buildTheHtmlOutput += "<a href='https://en.wiktionary.org/wiki/" + inputArrayValue + "' target='_blank'>";
-        buildTheHtmlOutput += "<img src='website-images/Wiktionary-logo_wpstyle-en_with_transparency.png' alt='Wiktionary Logo'>";
+        //        buildTheHtmlOutput += "<a href='https://en.wiktionary.org/wiki/" + inputArrayValue + "' target='_blank'>";
+        //        buildTheHtmlOutput += "<img src='website-images/Wiktionary-logo_wpstyle-en_with_transparency.png' alt='Wiktionary Logo'>";
         buildTheHtmlOutput += "</a>";
         buildTheHtmlOutput += "<a href='https://www.google.com/search?q=" + inputArrayValue + "' target='_blank'>";
         buildTheHtmlOutput += "<img src='website-images/google-logo.png' alt='Google Logo'>";
@@ -48,9 +49,10 @@ function showTranslationData(inputArray) {
         buildTheHtmlOutput += "</a>";
         buildTheHtmlOutput += "<p>" + inputArrayValue + "</p>";
         buildTheHtmlOutput += "</li>";
-
+        translatedWord = inputArrayValue;
 
     });
+    getReadData(translatedWord);
 
     $("#tr-results ul").html(buildTheHtmlOutput);
 
@@ -99,23 +101,31 @@ function getReadData(searchTerm) {
 
 function showReadData(readArray) {
     console.log(readArray);
-    let buildTheHtmlOutput = "";
+    if (readArray === undefined) {
+        alert("No results found")
 
-    $.each(readArray, function (readArrayKey, readArrayValue) {
-
-        buildTheHtmlOutput += "<li>";
-        buildTheHtmlOutput += "<h3>" + checkText(readArrayValue.volumeInfo.authors) + "</h3>";
-        buildTheHtmlOutput += "<p>" + checkText(readArrayValue.volumeInfo.title) + "</p>";
-        buildTheHtmlOutput += "<a href='https://play.google.com/store/books/details?id=" + readArrayValue.id + "' target='_blank'>";
-        buildTheHtmlOutput += "<img src='" + readArrayValue.volumeInfo.imageLinks.thumbnail + "'>";
-        buildTheHtmlOutput += "</a>";
-        buildTheHtmlOutput += "</li>";
+    } else {
 
 
-    });
+        let buildTheHtmlOutput = "";
 
-    $("#gb-results ul").html(buildTheHtmlOutput);
+        $.each(readArray, function (readArrayKey, readArrayValue) {
 
+            buildTheHtmlOutput += "<li>";
+            buildTheHtmlOutput += "<h3>" + checkText(readArrayValue.volumeInfo.authors) + "</h3>";
+            buildTheHtmlOutput += "<p>" + checkText(readArrayValue.volumeInfo.title) + "</p>";
+            buildTheHtmlOutput += "<a href='https://play.google.com/store/books/details?id=" + readArrayValue.id + "' target='_blank'>";
+            buildTheHtmlOutput += "<img src='" + readArrayValue.volumeInfo.imageLinks.thumbnail + "'>";
+            buildTheHtmlOutput += "</a>";
+            buildTheHtmlOutput += "</li>";
+
+
+        });
+
+        $("#gb-results ul").html(buildTheHtmlOutput);
+        $('#gb-results').show();
+        $('.read').show();
+    }
 }
 
 $('document').ready(function () {
@@ -143,13 +153,14 @@ $('document').ready(function () {
         let userInput = $('.translate-query').val();
         getTranslationData(userInput);
         $('#tr-results').show();
+
     })
 
 
     $('#text-read').submit(function (event) {
         event.preventDefault();
         let userInput = $('.read-query').val();
-        getReadData(userInput);
-        $('#gb-results').show();
+
+
     })
 })
