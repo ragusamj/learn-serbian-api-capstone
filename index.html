@@ -24,7 +24,7 @@
                     <ul>
                         <li><a href="#" onClick="window.location.reload()">Home</a></li>
                         <li><a href="#" class="menu-translate">Translate</a></li>
-                        <li><a href="#" class="menu-read">Read</a></li>
+                        <!--                        <li><a href="#" class="menu-read">Read</a></li>-->
                     </ul>
                 </nav>
             </div>
@@ -37,9 +37,15 @@
         <section class="hide-me home">
             <div class="text row">
 
-                <p> Welcome! This application is an excellent source for advanced Serbo-Croatian language and culture students.
-                    <br> This app has two features: <br> You can choose to translate text from English into Serbo-Croatian. <br>You can also find a book in Serbo-Croatian to practice your extensive reading.
-                </p>
+                <p> Welcome! This application is intended for advanced Serbo-Croatian language and culture students.
+                    <br>Translate one word or the whole sentence from English into Serbo-Croatian. <br> After the translation results, you will be able to click on additional features. <br> </p>
+
+                <ul class="features">
+                    <li>Google Search Icon to access various new articles and additional lexical resources.</li>
+                    <li>Google Images icon acts as a pictionary.</li>
+                    <li>If applicable, in addition to translation, you will be able to read free books in Serbo-Croatian.</li>
+                </ul>
+
 
             </div>
 
@@ -49,10 +55,12 @@
                     <button class="start-translate">Translate</button>
                 </div>
 
-                <div id="js-googlebooks" class="col-6">
-                    <!--                    <p>Find a book</p>-->
-                    <button class="start-read">Read</button>
-                </div>
+                <!--
+<div id="js-googlebooks" class="col-6">
+    <p>Find a book</p>
+    <button class="start-read">Read</button>
+</div>
+-->
             </div>
         </section>
 
@@ -63,9 +71,8 @@
             <div class="row"></div>
             <div id="search" class="search hidden">
                 <div class="about-translate">
-                    <p> Welcome to Serbo-Croatian translator! After you recieve the translation in Serbo-Croatian, you will be able to learn more about the words by clicking on google or google images icons.<br>The google search will provide you with relevant sources in Serbo-Croatian. You will be able to see how the translated portion works in a sentence, contextual topic, song lyrics and other cultural elements. <br> The google images act as a pictionary. You can click on it to see the meaning of the word in pictures.</p>
-
-                    In addition to translation, here are some other useful features of this translator. <br> Click on the google icon. <br>
+                    <p>
+                    </p>
 
                 </div>
                 <form id="text-translate" class="js-search-form">
@@ -91,27 +98,35 @@
         </section>
 
         <!--SCREEN 3: GOOGLE BOOKS SCREEN: INPUT -->
+
         <a name="read"></a>
         <section class="hide-me read">
-            <!--
-<div class="row">
-    <h2>FIND A BOOK</h2>
 
-    <form id="text-read" class="js-search-form">
-        <label for="query">Use a keyword in Serbo-croatian to find a book.</label>
-        <input type="text" class="read-query" placeholder="Find a book">
-        <button type="submit">Submit</button>
-    </form>
+
+            <!--
+            <div class="row">
+                <h2>FIND A BOOK</h2>
+-->
+
+            <!--
+<form id="text-read" class="js-search-form">
+    <label for="query">Use a keyword in Serbo-croatian to find a book.</label>
+    <input type="text" class="read-query" placeholder="Find a book">
+    <button type="submit">Submit</button>
+</form>
 </div>
 -->
 
 
-            <!--Cont. SCREEN 3 (under the search bar): GB RESULTS-->
+
+
+            <!--           Cont. SCREEN 3 (under the search bar): GB RESULTS-->
             <div id="gb-results" class="link row">
                 <ul>
                 </ul>
 
             </div>
+
 
         </section>
 

@@ -77,11 +77,11 @@ button {
     margin: 0.5rem 1rem;
     border-radius: 10px;
 */
-    background: #76B3FA;
+    background: ;
     border-radius: 100px;
     padding: 20px 80px;
     /*    background-color: rgba(255, 255, 255, 0.5);*/
-    color: #fff;
+    color: saddlebrown;
     text-decoration: none;
     font-size: 1.45rem;
     margin: 0px 23px;
@@ -94,7 +94,7 @@ button {
 }
 
 button:hover {
-    background-color: darkturquoise;
+    background-color: bisque;
 }
 
 input {
@@ -127,7 +127,7 @@ nav ul {
 nav ul li {
     display: inline-block;
     border-right: 0px;
-    margin-left: 60px;
+    margin-left: 10px;
     font-size: 12px;
     padding-top: 4px;
     border-radius: 5px;
@@ -184,7 +184,7 @@ nav ul li a {
 
 #tr-results,
 #gb-results {
-    background-color: cadetblue;
+    background-color: rgba(255, 255, 255, 0.5);
     max-width: 1000px;
     width: 90%;
     margin: 0 auto;
@@ -194,7 +194,8 @@ nav ul li a {
     padding-top: 1rem;
     padding-bottom: 2rem;
     vertical-align: middle;
-    border: solid saddlebrown;
+    border-radius: 20px;
+    /*    border: solid saddlebrown;*/
     opacity: 0.9;
 
 }
@@ -236,6 +237,23 @@ nav ul li a {
 
 }
 
+.features {
+    margin-top: -6rem;
+    margin-bottom: 3rem;
+    font-size: 1.3rem;
+    padding: 1rem 5rem;
+    line-height: 27pt;
+    border-radius: 2px;
+    text-align: left;
+    text-shadow: 0px .4px 0px #000000;
+    color: saddlebrown;
+    padding-bottom: 2rem;
+
+}
+
+.features li {
+    list-style-type: disc;
+}
 
 .text p {
     margin-top: 5rem;
