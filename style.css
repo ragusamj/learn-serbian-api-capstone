@@ -112,7 +112,7 @@ input {
 
 .link {
     display: inline-block;
-    float: right;
+    /*    float: right;*/
 }
 
 
@@ -342,9 +342,9 @@ nav ul li a {
     /*    float: left;*/
     border-radius: 2px;
     padding-left: .8rem;
-    margin-left: 10%;
-    margin-right: 10%;
-
+    margin-left: 1%;
+    margin-right: 1%;
+    vertical-align: middle;
 
 }
 

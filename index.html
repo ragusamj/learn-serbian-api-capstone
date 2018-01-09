@@ -38,7 +38,7 @@
             <div class="text row">
 
                 <p> Welcome! This application is intended for advanced Serbo-Croatian language and culture students.
-                    <br>Translate one word or the whole sentence from English into Serbo-Croatian. <br> After the translation results, you will be able to click on additional features. <br> </p>
+                    <br>Translate one word or the whole sentence from English into Serbo-Croatian. <br> After you receive the translation results, you will be able to click on additional features. <br> </p>
 
                 <ul class="features">
                     <li>Google Search Icon to access various new articles and additional lexical resources.</li>
@@ -77,7 +77,7 @@
                 </div>
                 <form id="text-translate" class="js-search-form">
                     <label for="query"></label>
-                    <input id="query" type="js-query" class="translate-query" placeholder="Translate">
+                    <input id="query" type="js-query" class="translate-query" aria-label="translate" placeholder="Translate">
                     <button type="submit" class="submit">Submit</button>
 
                 </form>
@@ -92,15 +92,23 @@
             <div id="tr-results" class="row">
 
                 <ul>
+
                 </ul>
 
             </div>
-        </section>
+            <div id="gb-results" class="link row">
+                <ul>
+                </ul>
+            </div>
 
-        <!--SCREEN 3: GOOGLE BOOKS SCREEN: INPUT -->
+            <!--        </section>-->
 
-        <a name="read"></a>
-        <section class="hide-me read">
+            <!--SCREEN 3: GOOGLE BOOKS SCREEN: INPUT -->
+
+            <!--
+            <a name="read"></a>
+            <div class="hide-me read">
+-->
 
 
             <!--
@@ -121,23 +129,27 @@
 
 
             <!--           Cont. SCREEN 3 (under the search bar): GB RESULTS-->
-            <div id="gb-results" class="link row">
-                <ul>
-                </ul>
 
-            </div>
+            <!--
+                <div id="gb-results" class="link row">
+                    <ul>
+                    </ul>
+-->
+
+            <!--                </div>-->
 
 
+
+            <!--            </div>-->
         </section>
-
 
     </main>
     <footer>
         <nav class="bottom link">
             <ul>
-                <li><a href="https://www.linkedin.com/in/maria-jovanovic-38586a155/" target="_blank"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
-                <li><a href="https://github.com/ragusamj" target="_blank"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
-                <li><a href="mailto:webdevjov@gmail.com" target="_blank"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/maria-jovanovic-38586a155/" target="_blank" aria-label="LinkedIn Link"><i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a></li>
+                <li><a href="https://github.com/ragusamj" target="_blank" aria-label="GitHub Link"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></li>
+                <li><a href="mailto:webdevjov@gmail.com" target="_blank" aria-label="Email Link"><i class="fa fa-envelope fa-2x" aria-hidden="true"></i></a></li>
             </ul>
         </nav>
     </footer>

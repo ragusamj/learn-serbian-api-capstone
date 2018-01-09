@@ -33,7 +33,7 @@ function getTranslationData(searchTerm) {
 
 function showTranslationData(inputArray) {
     console.log(inputArray);
-    let buildTheHtmlOutput = "";
+    let buildTheHtmlOutput = " ";
     let translatedWord = "";
     $("#tr-results ul").html("");
     $.each(inputArray, function (inputArrayKey, inputArrayValue) {
@@ -41,10 +41,10 @@ function showTranslationData(inputArray) {
         //        buildTheHtmlOutput += "<a href='https://en.wiktionary.org/wiki/" + inputArrayValue + "' target='_blank'>";
         //        buildTheHtmlOutput += "<img src='website-images/Wiktionary-logo_wpstyle-en_with_transparency.png' alt='Wiktionary Logo'>";
         buildTheHtmlOutput += "</a>";
-        buildTheHtmlOutput += "<a href='https://www.google.com/search?q=" + inputArrayValue + "' target='_blank'>";
+        buildTheHtmlOutput += "Find out more on <a href='https://www.google.com/search?q=" + inputArrayValue + "' target='_blank'>";
         buildTheHtmlOutput += "<img src='website-images/google-logo.png' alt='Google Logo'>";
         buildTheHtmlOutput += "</a>";
-        buildTheHtmlOutput += "<a href='http://images.google.com/images?gbv=2&hl=en&q=" + inputArrayValue + "' target='_blank'>";
+        buildTheHtmlOutput += " or on <a href='http://images.google.com/images?gbv=2&hl=en&q=" + inputArrayValue + "' target='_blank'>";
         buildTheHtmlOutput += "<img src='website-images/pictionary-google.png' alt='Google Image Logo'>";
         buildTheHtmlOutput += "</a>";
         buildTheHtmlOutput += "<p>" + inputArrayValue + "</p>";
@@ -107,15 +107,15 @@ function showReadData(readArray) {
     } else {
 
 
-        let buildTheHtmlOutput = "";
+        let buildTheHtmlOutput = "<li></li><li><h2>Pick a free e-book related to your search.</h2></li><li></li>";
 
         $.each(readArray, function (readArrayKey, readArrayValue) {
 
             buildTheHtmlOutput += "<li>";
             buildTheHtmlOutput += "<h3>" + checkText(readArrayValue.volumeInfo.authors) + "</h3>";
             buildTheHtmlOutput += "<p>" + checkText(readArrayValue.volumeInfo.title) + "</p>";
-            buildTheHtmlOutput += "<a href='https://play.google.com/store/books/details?id=" + readArrayValue.id + "' target='_blank'>";
-            buildTheHtmlOutput += "<img src='" + readArrayValue.volumeInfo.imageLinks.thumbnail + "'>";
+            buildTheHtmlOutput += "<a href='https://play.google.com/store/books/details?id=" + readArrayValue.id + "' target='_blank' alt='book link'>";
+            buildTheHtmlOutput += "<img src='" + readArrayValue.volumeInfo.imageLinks.thumbnail + "' alt='book image'>";
             buildTheHtmlOutput += "</a>";
             buildTheHtmlOutput += "</li>";
 
