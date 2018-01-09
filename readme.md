@@ -13,7 +13,7 @@ web resources.
 ## Use Case
 This app is for all English speakers wishing to learn Serbo-Croatian for all levels.
 The user will be able to translate English into Serbo-Croatian.
-After receiving the Serbo-Croatian translation of a single word, the user will be able to click on wiktionary, google images and google search icons to learn more about the word in the target language environment.
+After receiving the Serbo-Croatian translation of a single word, the user will be able to click on google images and google search icons to learn more about the word in the target language environment.
 By having access to this additional resource the user will be able to learn conjugations, declentions and other grammar-related information.
 The google-image icon will act as a modern day pictograph, by revelieling to the user what is the image of the searched word. For example, for the word "bird" the google image will yield a picture of a bird.
 The second functionality includes a possibility of searching the google books in Serbo-Croatian language, and will be able to access the relavant free e-books.
@@ -23,24 +23,24 @@ The second functionality includes a possibility of searching the google books in
 ## User Stories
 
 * As a user I would like to land on the website and undestand what is the website about in order to use it.
-![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/github-images/learn-serbian-api-home.png)
+![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/website-images/newhome-app.png)
 
 * As a user I want to be able to enter any word in the search bar and recieve the translation,
 weather I enter the English or the target language.
-![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/github-images/learn-serbian-api-translate.png)
+![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/website-images/newtranslate-app.png)
 
 
-* After the word yields wanted results in Serbo-Croatian language, I would like to click on the wiktionary,
+* After the word yields wanted results in Serbo-Croatian language, I would like to click on the
 general google searche and google images icon, to lean more about the word.
-![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/github-images/learn-serbian-api-translate-results.png)
+![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/website-images/newresults-app.png)
 
 
 
-*  As a user I would like to find out additional literature/resources to learn about the target language and the target country.
+*  As a user I would like to find out additional literature/resources to learn about the target language and the target country in Serbo-Croatian or other languages. Books in Serbo-Croatian are valuable to for language learning, whereas books in other languages about the region are valuable to me for learning about the culture of the region.
 
-![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/github-images/learn-serbian-api-read.png)
+![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/website-images/newresults-app.png)
 
-![Use Case](https://github.com/ragusamj/learn-serbian-api-capstone/blob/master/github-images/learn-serbian-api-read-results.png)
+
 
 
 ## Working Prototype
@@ -54,7 +54,7 @@ You can access a working prototype of the app here: https://ragusamj.github.io/l
 ## Functionality
 The app's functionality includes:
 * searching the dictionary for translation purposes English to Serbo-Croatian.
-* searching the google books in Serbo-Croatian.
+* searching the google books for puproses of learning the Serbo-Croatian language and culture.
 
 ## Technology
 * HTML
