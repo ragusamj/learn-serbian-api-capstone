@@ -98,6 +98,12 @@ input {
 
 .link {
     display: inline-block;
+    padding-top: 1rem;
+    margin-left: 9rem;
+}
+
+.link nav ul {
+    margin-left: 10rem;
 }
 
 
@@ -283,6 +289,7 @@ nav ul li a {
 
 #tr-results {
     width: 35%;
+    margin-top: 3rem;
 }
 
 #tr-results ul {
@@ -403,9 +410,10 @@ nav ul li a {
 
 footer {
     margin-left: auto;
-    margin-right: auto;
     display: inline-block;
     margin-top: 4rem;
+    margin-top: 4rem;
+    margin-right: 10rem;
 
 }
 
