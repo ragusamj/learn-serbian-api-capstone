@@ -38,8 +38,6 @@ function showTranslationData(inputArray) {
     $("#tr-results ul").html("");
     $.each(inputArray, function (inputArrayKey, inputArrayValue) {
         buildTheHtmlOutput += "<li>";
-        //        buildTheHtmlOutput += "<a href='https://en.wiktionary.org/wiki/" + inputArrayValue + "' target='_blank'>";
-        //        buildTheHtmlOutput += "<img src='website-images/Wiktionary-logo_wpstyle-en_with_transparency.png' alt='Wiktionary Logo'>";
         buildTheHtmlOutput += "</a>";
         buildTheHtmlOutput += "Find out more on <a href='https://www.google.com/search?q=" + inputArrayValue + "' target='_blank'>";
         buildTheHtmlOutput += "<img src='website-images/google-logo.png' alt='Google Logo'>";
